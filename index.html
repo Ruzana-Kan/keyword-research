@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyword Research Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1a9e8f;
+    --teal-dark: #167a6e;
+    --teal-light: #d0f0ec;
+    --accent: #f59e0b;
+    --bg: #f4f8f7;
+    --white: #ffffff;
+    --text: #1a2b2a;
+    --muted: #5a7a77;
+    --border: #cde8e4;
+    --row-even: #f0faf9;
+    --highlight: #e6f9f6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 40px 24px;
+    min-height: 100vh;
+  }
+
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--teal-dark);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+
+  .page-subtitle {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .section-badge {
+    background: var(--teal);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--teal-dark);
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(26,158,143,0.10), 0 1px 4px rgba(0,0,0,0.06);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    font-size: 0.83rem;
+    min-width: 750px;
+  }
+
+  thead tr {
+    background: var(--teal);
+    color: white;
+  }
+
+  thead th {
+    padding: 13px 14px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+
+  thead th:last-child { border-right: none; }
+  thead th:first-child { border-radius: 12px 0 0 0; }
+  thead th:last-child { border-radius: 0 12px 0 0; }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+
+  tbody tr:nth-child(even) { background: var(--row-even); }
+  tbody tr:nth-child(odd) { background: var(--white); }
+  tbody tr:hover { background: var(--highlight); }
+  tbody tr:last-child { border-bottom: none; }
+
+  tbody td {
+    padding: 11px 14px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    vertical-align: middle;
+    line-height: 1.45;
+    color: var(--text);
+  }
+
+  tbody td:last-child { border-right: none; }
+
+  .sl-cell {
+    background: var(--teal);
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    width: 40px;
+    min-width: 40px;
+  }
+
+  tbody tr:nth-child(even) .sl-cell { background: var(--teal-dark); }
+
+  .keyword-cell {
+    text-align: left;
+    font-weight: 500;
+    color: var(--teal-dark);
+    font-size: 0.82rem;
+  }
+
+  .social-cell {
+    text-align: left;
+    font-size: 0.78rem;
+    color: var(--muted);
+    min-width: 180px;
+  }
+
+  .kd-badge {
+    display: inline-block;
+    background: var(--teal-light);
+    color: var(--teal-dark);
+    border-radius: 8px;
+    padding: 2px 10px;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  .kd-low { background: #d1fae5; color: #065f46; }
+  .kd-mid { background: #fef3c7; color: #92400e; }
+  .kd-high { background: #fee2e2; color: #991b1b; }
+
+  .vol-num { font-weight: 600; color: var(--teal-dark); }
+
+  .cpc-num { color: #7c6f00; font-weight: 500; }
+
+  .footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 32px;
+    letter-spacing: 0.03em;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-title">Keyword Research Report</div>
+<div class="page-subtitle">SEO Analysis · Bangladesh Market · 2025</div>
+
+<!-- TABLE 1: Fountain Pen -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-badge">Table 1</span>
+    <span class="section-title">Fountain Pen — Bangladesh Keywords</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>SL<br>No.</th>
+          <th>Keyword</th>
+          <th>Search<br>Volume</th>
+          <th>CPC</th>
+          <th>DA</th>
+          <th>Social Site</th>
+          <th>SEO<br>Difficulty/KD</th>
+        </tr>
+      </thead>
+      <tbody id="table1"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TABLE 2: Python Bootcamp -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-badge">Table 2</span>
+    <span class="section-title">Python Bootcamp — NeXT IN Bangladesh Keywords</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>SL<br>No.</th>
+          <th>Keyword</th>
+          <th>Search<br>Volume</th>
+          <th>CPC</th>
+          <th>DA</th>
+          <th>Social Site</th>
+          <th>SEO<br>Difficulty/KD</th>
+        </tr>
+      </thead>
+      <tbody id="table2"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TABLE 3: Prompt Engineering -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-badge">Table 3</span>
+    <span class="section-title">Prompt Engineering — Bangladesh Keywords</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>SL<br>No.</th>
+          <th>Keyword</th>
+          <th>Search<br>Volume</th>
+          <th>CPC</th>
+          <th>DA</th>
+          <th>Social Site</th>
+          <th>SEO<br>Difficulty/KD</th>
+        </tr>
+      </thead>
+      <tbody id="table3"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer">Generated for SEO Research · All data approximate</div>
+
+<script>
+const data1 = [
+  { sl: 1, kw: "best fountain pen in Bangladesh", vol: 480, cpc: 0.35, da: 25, social: "facebook(3), Youtube(2), website(6)", kd: 12 },
+  { sl: 2, kw: "lamy safari price in bangladesh", vol: 320, cpc: 0.45, da: 28, social: "facebook(2), Youtube(3), website(5)", kd: 10 },
+  { sl: 3, kw: "pilot metropolitan bangladesh", vol: 260, cpc: 0.38, da: 22, social: "facebook(1), Youtube(2), website(4)", kd: 9 },
+  { sl: 4, kw: "twsbi fountain pen bangladesh", vol: 140, cpc: 0.52, da: 18, social: "facebook(2), Youtube(1), website(3)", kd: 7 },
+  { sl: 5, kw: "jinhao fountain pen price in bd", vol: 410, cpc: 0.15, da: 20, social: "facebook(3), Youtube(2), website(4)", kd: 8 },
+  { sl: 6, kw: "buy fountain pen online bangladesh", vol: 550, cpc: 0.42, da: 30, social: "facebook(4), Youtube(1), website(8)", kd: 14 },
+  { sl: 7, kw: "parker fountain pen price in bd", vol: 390, cpc: 0.28, da: 26, social: "facebook(2), Youtube(2), website(5)", kd: 11 },
+  { sl: 8, kw: "fountain pen ink price in bangladesh", vol: 290, cpc: 0.30, da: 24, social: "facebook(2), Youtube(3), website(4)", kd: 8 },
+  { sl: 9, kw: "sailor fountain pen bangladesh", vol: 90, cpc: 0.55, da: 15, social: "facebook(1), Linkedin(1), website(2)", kd: 6 },
+  { sl: 10, kw: "pens galaxy bd fountain pen", vol: 120, cpc: 0.20, da: 19, social: "facebook(3), Youtube(4), Linkedin(2), website(3)", kd: 5 },
+];
+
+const data2 = [
+  { sl: 1, kw: "python bootcamp in Bangladesh by NeXT IN", vol: 140, cpc: 0.32, da: 22, social: "facebook(2), Youtube(3), Linkedin(2), website(5)", kd: 4 },
+  { sl: 2, kw: "python course in bangladesh NeXT IN", vol: 120, cpc: 0.28, da: 20, social: "facebook(1), Youtube(2), website(4)", kd: 3 },
+  { sl: 3, kw: "best python bootcamp in dhaka", vol: 350, cpc: 0.45, da: 28, social: "facebook(3), Youtube(4), website(6)", kd: 12 },
+  { sl: 4, kw: "NeXT IN python training bangladesh", vol: 90, cpc: 0.25, da: 18, social: "facebook(1), Linkedin(2), website(3)", kd: 2 },
+  { sl: 5, kw: "learn python in bangladesh NeXT IN", vol: 150, cpc: 0.30, da: 21, social: "facebook(2), Youtube(2), website(4)", kd: 5 },
+  { sl: 6, kw: "python programming bootcamp dhaka", vol: 280, cpc: 0.40, da: 25, social: "facebook(3), Youtube(3), website(5)", kd: 10 },
+  { sl: 7, kw: "beginner python course bangladesh NeXT IN", vol: 110, cpc: 0.22, da: 19, social: "facebook(1), Youtube(1), website(3)", kd: 3 },
+  { sl: 8, kw: "advanced python bootcamp bangladesh", vol: 210, cpc: 0.38, da: 24, social: "facebook(2), Youtube(3), Linkedin(1), website(4)", kd: 8 },
+  { sl: 9, kw: "python web development course dhaka NeXT IN", vol: 130, cpc: 0.35, da: 22, social: "facebook(2), Youtube(2), website(4)", kd: 6 },
+  { sl: 10, kw: "data science with python bootcamp bangladesh", vol: 310, cpc: 0.50, da: 26, social: "facebook(3), Youtube(4), Linkedin(2), website(5)", kd: 11 },
+];
+
+function kdClass(kd) {
+  if (kd <= 7) return 'kd-low';
+  if (kd <= 11) return 'kd-mid';
+  return 'kd-high';
+}
+
+function renderTable(data, tbodyId) {
+  const tbody = document.getElementById(tbodyId);
+  data.forEach(row => {
+    tbody.innerHTML += `
+      <tr>
+        <td class="sl-cell">${row.sl}</td>
+        <td class="keyword-cell">${row.kw}</td>
+        <td><span class="vol-num">${row.vol}</span></td>
+        <td class="cpc-num">$${row.cpc.toFixed(2)}</td>
+        <td>${row.da}</td>
+        <td class="social-cell">${row.social}</td>
+        <td><span class="kd-badge ${kdClass(row.kd)}">${row.kd}</span></td>
+      </tr>`;
+  });
+}
+
+const data3 = [
+  { sl: 1, kw: "prompt engineering course bangladesh", vol: 320, cpc: 0.45, da: 25, social: "facebook(1), Youtube(2), Linkedin(1), website(4)", kd: 12 },
+  { sl: 2, kw: "prompt engineering training dhaka", vol: 210, cpc: 0.38, da: 28, social: "facebook(1), Youtube(3), website(8)", kd: 10 },
+  { sl: 3, kw: "learn prompt engineering bangla", vol: 450, cpc: 0.52, da: 22, social: "Youtube(4), website(6)", kd: 15 },
+  { sl: 4, kw: "prompt engineering freelance bd", vol: 150, cpc: 0.29, da: 30, social: "facebook(3), Youtube(4), Linkedin(2), website(6)", kd: 8 },
+  { sl: 5, kw: "chatgpt prompt bangla tutorial", vol: 280, cpc: 0.41, da: 24, social: "facebook(3), Youtube(3), website(4)", kd: 11 },
+  { sl: 6, kw: "beginner prompt engineering bd", vol: 120, cpc: 0.25, da: 26, social: "facebook(1), Youtube(4), website(8)", kd: 7 },
+  { sl: 7, kw: "ai prompt course dhaka", vol: 180, cpc: 0.35, da: 27, social: "facebook(2), Youtube(2), Linkedin(1), website(4)", kd: 9 },
+  { sl: 8, kw: "prompt engineering job bangladesh", vol: 90, cpc: 0.22, da: 32, social: "facebook(2), Youtube(2), Linkedin(1), website(4)", kd: 6 },
+  { sl: 9, kw: "free prompt engineering bangla", vol: 350, cpc: 0.48, da: 20, social: "facebook(1), Youtube(2), Linkedin(1), website(4)", kd: 14 },
+  { sl: 10, kw: "nextin prompt engineering", vol: 10, cpc: 0.10, da: 15, social: "facebook(1), Youtube(2), Linkedin(1), website(4)", kd: 2 },
+];
+
+renderTable(data1, 'table1');
+renderTable(data2, 'table2');
+renderTable(data3, 'table3');
+</script>
+</body>
+</html>
